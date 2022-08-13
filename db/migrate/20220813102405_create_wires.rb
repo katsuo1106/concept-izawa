@@ -8,8 +8,8 @@ class CreateWires < ActiveRecord::Migration[6.0]
       t.integer :husoku
       t.integer :kei_id, null: false
       t.integer :iro_id, null: false
-      t.integer :nagasa, null: false
-      t.float   :tanka,  null: false
+      t.decimal :nagasa, null: false, precision: 6, scale: 2
+      t.decimal :tanka,  null: false, precision: 6, scale: 2
       t.timestamps
     end
   end

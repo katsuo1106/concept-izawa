@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2022_08_13_102405) do
     t.integer "husoku"
     t.integer "kei_id", null: false
     t.integer "iro_id", null: false
-    t.integer "nagasa", null: false
-    t.float "tanka", null: false
+    t.decimal "nagasa", precision: 6, scale: 2, null: false
+    t.decimal "tanka", precision: 6, scale: 2, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
