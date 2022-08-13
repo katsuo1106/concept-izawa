@@ -1,3 +1,17 @@
 <h1>井澤金属側</h1>
 <%= link_to 'コンセプト側へ',root_path %>
 <%= link_to '新規品作成',new_wire_path %>
+
+<% @wire.each do |wire| %>
+  <div class="article">
+    <div class="article-genre">
+      <%= wire.hinban %>
+    </div>
+    <div class="article-title">
+      <%= wire.nagasa %>
+    </div>
+    <div class="article-text">
+      <%= wire.tanka %>
+    </div>
+  </div>
+<% end %>
