@@ -1,7 +1,5 @@
 # README
 
-# README
-
 ## wiresテーブル
 
 | Column    | Type    | Options     |
