@@ -2,7 +2,7 @@
 <%= link_to 'コンセプト側へ',root_path %>
 <%= link_to '新規品作成',new_wire_path %>
 
-<% @wire.each do |wire| %>
+<% @wires.each do |wire| %>
   <div class="article">
     <div class="article-genre">
       <%= wire.hinban %>
@@ -14,7 +14,10 @@
       生産本数：<%= wire.seisan %>
     </div>
     <div class="article-text">
-    　在庫　：<%= wire.husoku %>
+    　在庫　：<%= wire.seisan - wire.chumon %>
+    </div>
+    <div class="prototype__manage">
+      <%= link_to "詳細", wire_path(wire.id), class: :wire_btn %>
     </div>
   </div>
 <% end %>

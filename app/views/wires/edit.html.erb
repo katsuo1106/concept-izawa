@@ -1,0 +1,14 @@
+<h1>編集画面</h1>
+<%= @wire.hinban %><br>
+確定注文入力
+<%= form_with model: @wire,  local: true do |f| %>
+  <div class="wire-box">
+    
+ 
+    
+    <%= f.text_field :chumon, class:"chumon", placeholder:"確定注文数" %>
+    <%= f.text_field :seisan, class:"seisan", placeholder:"生産数" %>
+    <%= f.text_field :husoku, class:"husoku", placeholder:"不足数" %>
+    <%= f.submit "編集" ,class:"btn" %>
+  </div>
+<% end %>
