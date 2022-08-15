@@ -1,6 +1,7 @@
 class WiresController < ApplicationController
   
   def top
+    @wires = Wire.all
   end
   
   def index
@@ -35,6 +36,11 @@ class WiresController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def reset
+    Wire.update_all(chumon: 0)
+    redirect_to wires_path
   end
 
   private

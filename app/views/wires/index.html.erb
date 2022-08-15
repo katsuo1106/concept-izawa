@@ -1,6 +1,8 @@
 <h1>井澤金属側</h1>
 <%= link_to 'コンセプト側へ',root_path %>
 <%= link_to '新規品作成',new_wire_path %>
+<%= link_to 'リセット',reset_path, method: :patch  %>
+
 
 <% @wires.each do |wire| %>
   <div class="article">
@@ -8,16 +10,16 @@
       <%= wire.hinban %>
     </div>
     <div class="article-title">
-      確定注文：<%= wire.chumon %>
+      確定注文:  <%= wire.chumon %>
     </div>
         <div class="article-title">
-      生産本数：<%= wire.seisan %>
+    　在庫　: <%= wire.seisan %>
     </div>
     <div class="article-text">
-    　在庫　：<%= wire.seisan - wire.chumon %>
+    　不足　:<%= wire.seisan - wire.chumon %>
     </div>
     <div class="prototype__manage">
-      <%= link_to "詳細", wire_path(wire.id), class: :wire_btn %>
+      <%= link_to "編集", edit_wire_path(wire.id), class: :wire_btn %>
     </div>
   </div>
 <% end %>
