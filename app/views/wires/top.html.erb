@@ -1,6 +1,7 @@
 <h1>コンセプト側</h1>
 <%= link_to '井澤側へ',wires_path %>
 <% @wires.each do |wire| %>
+<% if (wire.seisan - wire.chumon).negative? %>
   <div class="article">
     <div class="article-genre">
       <%= wire.hinban %>
@@ -18,5 +19,6 @@
       <%= link_to "編集", edit_wire_path(wire.id), class: :wire_btn %>
     </div>
   </div>
+<% end %>
 <% end %>
 
