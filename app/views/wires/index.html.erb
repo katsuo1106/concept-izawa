@@ -4,13 +4,12 @@
 <%= link_to '0リセット',reset_path, method: :patch  %>
 
 <% @wires.each do |wire| %>
-<%= form_with model: @wire do |form| %>
   <div class="article">
     <div class="article-genre">
       <%= wire.hinban %>
     </div>
     <div class="article-title">
-      確定注文:  <%= form.text_field :chumon, valu: wire.chumon %>
+    確定注文: <%= wire.chumon %>
     </div>
     <div class="article-title">
     　在庫　: <%= wire.seisan %>
@@ -22,5 +21,4 @@
       <%= link_to "編集", edit_wire_path(wire.id), class: :wire_btn %>
     </div>
   </div>
-  <% end %>
 <% end %>
