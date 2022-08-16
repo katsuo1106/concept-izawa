@@ -43,6 +43,9 @@ class WiresController < ApplicationController
     redirect_to wires_path
   end
 
+  def allchumon
+  end
+
   private
 
   def wire_params
