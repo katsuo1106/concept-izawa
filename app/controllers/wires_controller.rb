@@ -1,11 +1,12 @@
 class WiresController < ApplicationController
   
-  def top
+  def concept
     @wires = Wire.all
   end
   
-  def index
+  def izawa
     @wires = Wire.all
+  
   end
 
   def new
@@ -40,10 +41,12 @@ class WiresController < ApplicationController
 
   def reset
     Wire.update_all(chumon: 0)
-    redirect_to wires_path
+    redirect_to izawa_path
   end
 
-  def allchumon
+  def ikkatsu
+    @wire = Wire.update_all(chumon_params)
+    redirect_to izawa_path
   end
 
   private

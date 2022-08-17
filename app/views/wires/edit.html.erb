@@ -1,10 +1,14 @@
-<h1>編集画面</h1>
-<%= @wire.hinban %><br>
-確定注文入力
+<h1>品番編集ページ</h1>
 <%= form_with model: @wire,  local: true do |f| %>
   <div class="wire-box">
-    注文数<%= f.text_field :chumon, class:"chumon", placeholder:"確定注文数" %>
-    在庫数<%= f.text_field :seisan, class:"seisan", placeholder:"生産数" %>
-    <%= f.submit "確定" ,class:"btn" %>
+    <%= f.text_field :hinban, class:"hinban", placeholder:"品番名" %>
+    <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"genre-select"}) %>
+    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"genre-select"}) %>
+    <%= f.text_field :nagasa, class:"nagasa", placeholder:"L寸" %>
+    <%= f.text_field :tanka, class:"tanka", placeholder:"単価" %>
+    <%= f.text_field :chumon, class:"chumon", placeholder:"確定注文数" %>
+    <%= f.text_field :seisan, class:"seisan", placeholder:"生産数" %>
+    <%= f.text_field :husoku, class:"husoku", placeholder:"不足数" %>
+    <%= f.submit "新規品を登録" ,class:"btn" %>
   </div>
 <% end %>

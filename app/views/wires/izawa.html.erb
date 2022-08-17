@@ -1,0 +1,28 @@
+<h1>井澤金属側</h1>
+<%= link_to 'コンセプト側へ',root_path %>
+<%= link_to '新規品作成',new_wire_path %>
+<%= link_to '0リセット',reset_path, method: :patch  %>
+<%= link_to '一括登録',ikkatsu_path, method: :patch  %>
+
+<%= form_with model: @wire, local: true do |f|%>
+<% @wires.each do |wire| %>
+  <div class="article">
+    <div class="article-genre">
+      <%= link_to "#{wire.hinban}", edit_wire_path(wire.id), class: :wire_btn %>
+    </div>
+    <div class="article-title">
+    確定注文: <%= wire.chumon %>
+        <%= f.text_field :chumon, id:"prototype_title" %>
+    </div>
+    <div class="article-title">
+    　在庫　: <%= wire.seisan %>
+    </div>
+    <div class="article-text">
+    　不足　:<%= wire.seisan - wire.chumon %>
+    </div>
+
+  </div>
+
+  <% end %>
+    <%= f.submit "保存する", class: :form__btn  %>
+<% end %>

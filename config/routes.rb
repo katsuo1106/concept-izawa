@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: "wires#top"
+  root to: "wires#concept"
+  get 'izawa', to: 'wires#izawa'
   patch 'reset', to: 'wires#reset'
-  patch 'allchumon', to: 'wires#allchumon'
+  patch 'ikkatsu', to: 'wires#ikkatsu'
+
   resources :wires,only: [:index, :new, :create, :show, :edit, :update]
 end
  
