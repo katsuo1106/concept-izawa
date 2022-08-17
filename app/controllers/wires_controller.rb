@@ -57,8 +57,4 @@ class WiresController < ApplicationController
   def wire_params
     params.require(:wire).permit(:hinban, :kei_id ,:iro_id ,:nagasa, :tanka, :chumon, :seisan, :husoku)
   end
-
-  def chumon_params
-    params.require(:wire).permit(:chumon)
-  end
 end
