@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   patch 'reset', to: 'wires#reset'
   patch 'ikkatsu', to: 'wires#ikkatsu'
 
-  resources :wires,only: [:index, :new, :create, :show, :edit, :update]
+  resources :wires,only: [:new, :create, :show, :edit, :update] do
+    member do
+      get 'izawachumon'
+    end
+  end
+
+
 end
  

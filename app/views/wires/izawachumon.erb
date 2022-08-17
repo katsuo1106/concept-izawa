@@ -1,0 +1,6 @@
+<h1>確定注文数入力ページ</h1>
+<%= form_with model: @wire,  local: true do |f| %>
+  <div class="wire-box">
+    注文数<%= f.text_field :chumon, class:"chumon", placeholder:"確定注文数" %>
+  <%= f.submit "確定" ,class:"btn" %>
+  <% end %>

@@ -6,7 +6,10 @@ class WiresController < ApplicationController
   
   def izawa
     @wires = Wire.all
-  
+  end
+
+  def izawachumon
+    @wire = Wire.find(params[:id])
   end
 
   def new
@@ -32,8 +35,8 @@ class WiresController < ApplicationController
 
   def update
     @wire = Wire.find(params[:id])
-    if @wire.update(chumon_params)
-      redirect_to wires_path
+    if @wire.update(wire_params)
+      redirect_to izawa_path
     else
       render :edit
     end

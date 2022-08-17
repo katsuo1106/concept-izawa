@@ -11,7 +11,8 @@
       <%= link_to "#{wire.hinban}", edit_wire_path(wire.id), class: :wire_btn %>
     </div>
     <div class="article-title">
-    確定注文: <%= wire.chumon %>
+    確定注文:
+    <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_btn %>
         <%= f.text_field :chumon, id:"prototype_title" %>
     </div>
     <div class="article-title">
