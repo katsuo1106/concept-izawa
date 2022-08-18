@@ -14,8 +14,12 @@
     確定注文:
  <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_btn %>
     </div>
-      <div class="btn", id="go_button_<%= wire.id %>">
-    <%= render partial: 'wires/izawachumon', locals: {wire: wire} %>
+  <div class="btn", id="go_button_<%= wire.id %>">
+  <%= form_with model: @wire, local: true do |f| %>
+  <div class="wire-box">
+    <%= f.text_field :chumon, autofocus: true, class:"chumon", placeholder:"確定注文数" %>
+  <%= f.submit "確定" ,class:"btn" %>
+<% end %>
   </div>
 
     <div class="article-title">
@@ -36,3 +40,4 @@
     $("p").text("成功！！");
   });
 </script>
+
