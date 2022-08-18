@@ -6,18 +6,11 @@
     <div class="article-genre">
       <%= wire.hinban %>
     </div>
-    <div class="article-title">
-      確定注文:  <%= wire.chumon %>
-    </div>
         <div class="article-title">
-    　在庫　: <%= wire.seisan %>
+        <% hitsuyousu = wire.seisan - wire.chumon %>
+    　不足数　: <font color=red><%= link_to "#{hitsuyousu}",conceptseisan_wire_path(wire.id), class: :wire_btn %></font>
     </div>
-    <div class="article-text">
-    　不足　:<%= wire.seisan - wire.chumon %>
-    </div>
-    <div class="prototype__manage">
-      <%= link_to "編集", edit_wire_path(wire.id), class: :wire_btn %>
-    </div>
+ 
   </div>
 <% end %>
 <% end %>

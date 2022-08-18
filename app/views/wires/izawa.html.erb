@@ -18,9 +18,11 @@
     <div class="article-title">
     　在庫　: <%= wire.seisan %>
     </div>
+    <% if (wire.seisan - wire.chumon).negative? %>
     <div class="article-text">
-    　不足　:<%= wire.seisan - wire.chumon %>
+    　不足　:<font color=red><%= wire.seisan - wire.chumon %></font>
     </div>
+    <% end %>
 
   </div>
 

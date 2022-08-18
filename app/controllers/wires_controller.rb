@@ -6,10 +6,16 @@ class WiresController < ApplicationController
   
   def izawa
     @wires = Wire.all
+    @wire = Wire.find_by(chumon: params[:chumon])
   end
 
   def izawachumon
     @wire = Wire.find(params[:id])
+  end
+
+  def conceptseisan
+    @wire = Wire.find(params[:id])
+    @wire.seisan = 0
   end
 
   def new
@@ -25,6 +31,15 @@ class WiresController < ApplicationController
     end
   end
 
+  def update
+    @wire = Wire.find(params[:id])
+    if @wire.update(wire_params)
+      redirect_to izawa_path
+    else
+      render :edit
+    end
+  end
+
   def show
     @wire = Wire.find(params[:id])
   end
@@ -33,12 +48,12 @@ class WiresController < ApplicationController
     @wire = Wire.find(params[:id])
   end
 
-  def update
+  def update2
     @wire = Wire.find(params[:id])
     if @wire.update(wire_params)
-      redirect_to izawa_path
+      redirect_to root_path
     else
-      render :edit
+      render :conceptseisan
     end
   end
 
