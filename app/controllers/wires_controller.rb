@@ -6,7 +6,6 @@ class WiresController < ApplicationController
   
   def izawa
     @wires = Wire.all
-    @wire = Wire.find_by(chumon: params[:chumon])
   end
 
   def izawachumon
