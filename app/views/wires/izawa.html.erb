@@ -12,8 +12,12 @@
     </div>
     <div class="article-title">
     確定注文:
-    <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_btn %>
+ <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_btn %>
     </div>
+      <div class="btn", id="go_button_<%= wire.id %>">
+    <%= render partial: 'wires/izawachumon', locals: {wire: wire} %>
+  </div>
+
     <div class="article-title">
     　在庫　: <%= wire.seisan %>
     </div>
@@ -24,3 +28,11 @@
     <% end %>
   </div>
 <% end %>
+
+
+<p>テスト</p>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $("p").text("成功！！");
+  });
+</script>

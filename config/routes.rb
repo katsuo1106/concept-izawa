@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :wires,only: [:new, :create, :show, :edit, :update] do
     member do
       get 'izawachumon'
+      get '_izawachumon'
       get 'conceptseisan'
       patch 'update2'
     end
