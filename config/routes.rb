@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     member do
       get 'izawachumon'
       get '_izawachumon'
-      get 'conceptseisan'
+      get 'conceptzaiko'
       patch 'update2'
     end
   end

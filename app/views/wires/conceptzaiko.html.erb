@@ -2,6 +2,6 @@
 
 <%= form_with model: @wire, url:update2_wire_path, local: true do |f| %>
   <div class="wire-box">
-    生産数<%= f.text_field :seisan, autofocus: true,class:"seisan", placeholder:"生産数" %>
+    生産数<%= f.text_field :zaiko, autofocus: true,class:"zaiko", placeholder:"生産数" %>
   <%= f.submit "確定" ,class:"btn" %>
 <% end %>

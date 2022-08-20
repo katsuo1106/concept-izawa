@@ -14,9 +14,10 @@ ActiveRecord::Schema.define(version: 2022_08_13_102405) do
 
   create_table "wires", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "hinban", null: false
-    t.integer "chumon"
-    t.integer "seisan"
-    t.integer "husoku"
+    t.integer "chumon", null: false
+    t.integer "zaiko", null: false
+    t.integer "chumonlog", null: false
+    t.integer "zaikolog", null: false
     t.integer "kei_id", null: false
     t.integer "iro_id", null: false
     t.decimal "nagasa", precision: 6, scale: 2, null: false

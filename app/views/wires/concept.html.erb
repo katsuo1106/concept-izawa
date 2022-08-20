@@ -1,14 +1,14 @@
 <h1>コンセプト側</h1>
 <%= link_to '井澤側へ',izawa_path %>
 <% @wires.each do |wire| %>
-<% if (wire.seisan - wire.chumon).negative? %>
+<% if wire.zaiko.negative? %>
   <div class="article">
     <div class="article-genre">
       <%= wire.hinban %>
     </div>
         <div class="article-title">
-        <% hitsuyousu = wire.seisan - wire.chumon %>
-    　不足数　: <font color=red><%= link_to "#{hitsuyousu}",conceptseisan_wire_path(wire.id), class: :wire_btn %></font>
+        <% hitsuyousu = wire.zaiko %>
+    　不足数　: <font color=red><%= link_to "#{hitsuyousu}",conceptzaiko_wire_path(wire.id), class: :wire_btn %></font>
     </div>
  
   </div>
