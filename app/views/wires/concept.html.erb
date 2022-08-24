@@ -1,17 +1,77 @@
-<h1>コンセプト側</h1>
-<%= link_to '井澤側へ',izawa_path %>
+      <header class="header">
+      <div class="concept-var">
+        <div class="concept-logo">
+              <%= link_to "CONCEPT", root_path, class: :concept__btn %>
+              </div>
+              <div class="izawa-logo">
+              <%= link_to "井澤金属→", izawa_path, class: :izawa__btn %>
+              </div>
+        </div>
+      </div>
+    </header>
+<% if @wires.any?{ |wires| wires.zaiko < 0} %>
+    <div class="zettaiseisan">
+    17:30までに絶対生産
+    </div>
+    <% else %>
+    <div class="kaetteyosi">帰ってヨシ！</div>
+    <% end %>
+    <div class="topspace">
+    </div>
+
 <% @wires.each do |wire| %>
 <% if wire.zaiko.negative? %>
-  <div class="article">
-    <div class="article-genre">
+
+  <div class="concept-seisan">
+<% if wire.iro_id == 3 %>
+  <div class="hidari">
+<div class="wirekei"><%= "#{wire.kei.name}" %></div>
+ <div class="wirered"><%= "L#{wire.nagasa}" %></div>
+</div>
+    <div class="concept-hinban">
       <%= wire.hinban %>
     </div>
-        <div class="article-title">
+        <div class="concept-hitsuyousu">
         <% hitsuyousu = wire.zaiko %>
-    　不足数　: <font color=red><%= link_to "#{hitsuyousu}",conceptzaiko_wire_path(wire.id), class: :wire_btn %></font>
+        <font color=red><%= "#{hitsuyousu}" %></font>
     </div>
- 
+    <div class="concept-hensyu-btn">
+      <%= link_to "編集",conceptzaiko_wire_path(wire.id), class: :wire_btn %>
+    </div> 
   </div>
+  <% elsif wire.iro_id == 2%>
+    <div class="hidari">
+<div class="wirekei"><%= "#{wire.kei.name}" %></div>
+ <div class="wireblack"><%= "L#{wire.nagasa}" %></div>
+</div>
+    <div class="concept-hinban">
+      <%= wire.hinban %>
+    </div>
+        <div class="concept-hitsuyousu">
+        <% hitsuyousu = wire.zaiko %>
+        <font color=red><%= "#{hitsuyousu}" %></font>
+    </div>
+    <div class="concept-hensyu-btn">
+      <%= link_to "編集",conceptzaiko_wire_path(wire.id), class: :wire_btn %>
+    </div> 
+  </div>
+  <% else wire.iro_id == 4%>
+    <div class="hidari">
+<div class="wirekei"><%= "#{wire.kei.name}" %></div>
+ <div class="wirewhite"><%= "L#{wire.nagasa}" %></div>
+</div>
+    <div class="concept-hinban">
+      <%= wire.hinban %>
+    </div>
+        <div class="concept-hitsuyousu">
+        <% hitsuyousu = wire.zaiko %>
+        <font color=red><%= "#{hitsuyousu}" %></font>
+    </div>
+    <div class="concept-hensyu-btn">
+      <%= link_to "編集",conceptzaiko_wire_path(wire.id), class: :wire_btn %>
+    </div> 
+  </div>
+  <% end %>
 <% end %>
 <% end %>
 

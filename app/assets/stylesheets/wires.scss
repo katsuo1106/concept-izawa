@@ -3,52 +3,196 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .header {
-  background-color: #f1f8fe;
-  margin-bottom: 48px;
-  padding: 20px 0;
+  background-color: #CBCBCB;
+  height: 125px;
+  width: 100%;
 
 }
-.inner {
-  width: 1024px;
-  margin: 0 auto;
-}
-.nav {
+.concept-var {
+  height: 125px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-.logo {
-  width: 200px;
-}
-.nav__btn{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+
+.concept-logo {
+  width: 400px;
+  height: 93px;
+  left: -23px;
+  top: 0px; 
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  text-align: center;
+  vertical-align: middle;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-}
-.nav__btn:hover{
-  color: #fff;
-  background: #87CEFA;
+  color: #606060;
 }
 
-.nav__logout{
-  display: inline-block;
-  padding: 0.4em 1.6em;
-  font-size: 0.8em;
-  color: #87CEFA;
+.concept__btn{
+  text-decoration: none;
+  color: #606060;
+}
+
+.izawa-logo{
+width: 120px;
+height: 30px;
+left: 1138px;
+top: 62px;
+border: 1px solid #000000;
+display: flex;
+align-items: center;
+margin: 45px 25px 0px 0px;
+}
+
+.izawa__btn{
+width: 237px;
+
+left: 0px;
+top: 0px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 29px;
+text-align: center;
+text-decoration: none;
+user-select: none;
+background: #E0E0E0;
+color: #606060;
+}
+
+.zettaiseisan {
+  width: 100%;
+  height: 33px;
+  left: 0px;
+  top: 125px;
+  background: #DE6666;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+letter-spacing: 0.3em;
+color: #FFFFFF;
+}
+
+.kaetteyosi{
+  width: 100%;
+  height: 33px;
+  left: 0px;
+  top: 125px;
+  background: #66DE80;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+text-align: center;
+letter-spacing: 0.3em;
+color: #FFFFFF;
+}
+
+.topspace {
+  width: 100%;
+height: 80px;
+left: 2px;
+top: 159px;
+}
+
+.hidari{
+  height: 50px;
+  width: 150px;
+}
+
+.wirekei{
+  height: 20px;
+  width: 125px;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 5px;
+
+}
+
+.wirered{
+  height: 20px;
+  width: 125px;
+  background-color: #FF4646;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.wireblack{
+  height: 20px;
+  width: 125px;
+  background-color: #515151;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #FFFFFF;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.wirewhite{
+  height: 20px;
+  width: 125px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  font-size: 11px;
+  color: #000000;
+  text-align: center;
+  padding-top: 2px;
+  border: 1px solid #000000;
+}
+
+.concept-seisan {
+  display: flex;
+  justify-content: center;
+}
+
+
+.concept-hinban {
+  text-align: center;
+  height: 50px;
+  font-size: 30px;
+  width: 280px;
+  margin-right: 23px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #000000;
+
+}
+
+.concept-hitsuyousu{
+  text-align: center;
+  height: 50px;
+  width: 120px;
+  font-size: 30px;
+  border-bottom: 1px solid #000000;
+
+}
+
+.concept-hensyu-btn{
+width: 40px;
+height: 25px;
+top: 305px;
+text-align: center;
+margin-top: 12px;
+margin-left: 23px;
+background: #D9D9D9;
+border: 1px solid #000000;
+border-radius: 5px;
+user-select: none;
+
+}
+
+.wire_btn{
+  font-size: 14px;
   text-decoration: none;
   user-select: none;
-}
-.nav__logout:hover{
-  opacity: 0.5;
-}
-
-
-
-h1 {color: darkgrey;
+  color: #606060;
 }

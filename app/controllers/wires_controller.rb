@@ -1,11 +1,11 @@
 class WiresController < ApplicationController
   
   def concept
-    @wires = Wire.all
+    @wires = Wire.all.order(:hinban)
   end
   
   def izawa
-    @wires = Wire.all
+    @wires = Wire.all.order(:hinban)
   end
 
   def izawachumon
