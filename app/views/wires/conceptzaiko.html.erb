@@ -1,7 +1,69 @@
-<h1>生産数入力ページ</h1>
+      <header class="header">
+      <div class="concept-var">
+        <div class="concept-logo">
+              <%= link_to "CONCEPT", root_path, class: :concept__btn %>
+              </div>
+              <div class="izawa-logo">
+              <%= link_to "井澤金属→", izawa_path, class: :izawa__btn %>
+              </div>
+        </div>
+      </div>
+    </header>
+        <div class="zettaiseisan">
+    17:30までに絶対生産
+    </div>
+     <div class="topspace">
+    </div>
 
-<%= form_with model: @wire, url:update2_wire_path, local: true do |f| %>
+      <div class="concept-seisan">
+<% if @wire.iro_id == 3 %>
+  <div class="hidari">
+<div class="wirekei"><%= "#{@wire.kei.name}" %></div>
+ <div class="wirered"><%= "L#{@wire.nagasa}" %></div>
+</div>
+    <div class="concept-hinban">
+      <%= @wire.hinban %>
+    </div>
+        <div class="concept-hitsuyousu">
+        <% hitsuyousu = @wire.zaikolog %>
+        <font color=red><%= "#{hitsuyousu}" %></font>
+    </div>
+
+
+  <% elsif @wire.iro_id == 2%>
+    <div class="hidari">
+<div class="wirekei"><%= "#{@wire.kei.name}" %></div>
+ <div class="wireblack"><%= "L#{@wire.nagasa}" %></div>
+</div>
+    <div class="concept-hinban">
+      <%= @wire.hinban %>
+    </div>
+        <div class="concept-hitsuyousu">
+        <% hitsuyousu = @wire.zaikolog %>
+        <font color=red><%= "#{hitsuyousu}" %></font>
+    </div>
+
+
+  <% else @wire.iro_id == 4%>
+    <div class="hidari">
+<div class="wirekei"><%= "#{@wire.kei.name}" %></div>
+ <div class="wirewhite"><%= "L#{@wire.nagasa}" %></div>
+</div>
+    <div class="concept-hinban">
+      <%= @wire.hinban %>
+    </div>
+        <div class="concept-hitsuyousu">
+        <% hitsuyousu = @wire.zaikolog %>
+        <font color=red><%= "#{hitsuyousu}" %></font>
+    </div>
+  <% end %>
+  <%= form_with model: @wire, url:update2_wire_path, local: true do |f| %>
   <div class="wire-box">
-    生産数<%= f.text_field :zaiko, autofocus: true,class:"zaiko", placeholder:"生産数" %>
+    <%= f.text_field :zaiko, autofocus: true,class:"conceptzaikoform", placeholder:"生産数入力" %>
   <%= f.submit "確定" ,class:"btn" %>
+   </div>
 <% end %>
+ 
+
+
+    

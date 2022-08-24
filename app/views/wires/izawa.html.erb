@@ -9,8 +9,6 @@
         </div>
       </div>
     </header>
-<h1>井澤金属側</h1>
-<%= link_to 'コンセプト側へ',root_path %>
 <%= link_to '新規品作成',new_wire_path %>
 <%= link_to '0リセット',reset_path, method: :patch  %>
 
@@ -19,15 +17,15 @@
 <% @wires.each do |wire| %>
   <div class="article">
     <div class="article-genre">
-      <%= link_to "#{wire.hinban}", edit_wire_path(wire.id), class: :wire_btn %>
+      <%= link_to "#{wire.hinban}", edit_wire_path(wire.id), class: :wire_bt %>
     </div>
     <div class="article-title">
     確定注文:
- <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_btn %>
+ <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_bt %>
     </div>
-  <div class="btn", id="go_button_<%= wire.id %>">
 
-  <div class="wire-box">
+
+  <div class="wire-boxx">
 
   </div>
 

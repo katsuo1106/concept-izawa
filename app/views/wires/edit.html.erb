@@ -1,6 +1,6 @@
 <h1>品番編集ページ</h1>
 <%= form_with model: @wire,  local: true do |f| %>
-  <div class="wire-box">
+  <div class="wire-b">
     <%= f.text_field :hinban, class:"hinban", placeholder:"品番名" %>
     <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"genre-select"}) %>
     <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"genre-select"}) %>
