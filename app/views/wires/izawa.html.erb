@@ -9,8 +9,12 @@
         </div>
       </div>
     </header>
-<%= link_to '新規品作成',new_wire_path %>
-<%= link_to '0リセット',reset_path, method: :patch  %>
+    <div class="izawatopspace">
+      <div class="shinkihin"><%= link_to '新規品作成',new_wire_path,class: :izawa__shinki %></div>
+      <div class="ichiran">一覧</div>
+      <div class="reset"><%= link_to '0リセット',reset_path,class: :izawa__riset ,method: :patch  %></div>
+    </div>
+
 
 
 

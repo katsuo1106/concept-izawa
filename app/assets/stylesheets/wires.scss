@@ -215,3 +215,51 @@ user-select: none;
   margin-left: 145px;
   margin-top: 2px;
 }
+
+.izawatopspace{
+  width: 100%;
+height: 33px;
+background-color: rgb(146, 226, 255);
+display: flex;
+}
+
+.shinkihin{
+  width: 25%;
+  height: 31px;
+  text-align: center;
+  line-height:31px;
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: #CBCBCB;  
+}
+.ichiran{
+  width: 25%;
+  height: 31px;
+  text-align: center;
+  line-height:31px;
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: #CBCBCB;  
+}
+
+.reset{
+  width: 50%;
+  height: 31px;
+  text-align: center;
+  line-height:31px;
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: #CBCBCB;  
+}
+
+.izawa__shinki{
+  text-decoration: none;
+  user-select: none;
+  color: #606060;
+}
+
+.izawa__riset{
+  text-decoration: none;
+  user-select: none;
+  color: #606060;
+}
