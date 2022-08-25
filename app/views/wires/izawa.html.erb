@@ -11,38 +11,29 @@
     </header>
     <div class="izawatopspace">
       <div class="shinkihin"><%= link_to '新規品作成',new_wire_path,class: :izawa__shinki %></div>
-      <div class="ichiran">一覧</div>
+      <div class="ichiran">注文書作成</div>
       <div class="reset"><%= link_to '0リセット',reset_path,class: :izawa__riset ,method: :patch  %></div>
     </div>
-
-
-
-
-<% @wires.each do |wire| %>
-  <div class="article">
-    <div class="article-genre">
-      <%= link_to "#{wire.hinban}", edit_wire_path(wire.id), class: :wire_bt %>
-    </div>
-    <div class="article-title">
-    確定注文:
- <%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_bt %>
-    </div>
-
-
-  <div class="wire-boxx">
-
-  </div>
-
- 
-    <% if wire.zaiko.negative? %>
-    <div class="article-text">
-    　不足　:<font color=red><%= wire.zaiko  %></font>
-    </div>
-    <% else %>
-        <div class="article-title">
-        　在庫　: <%= wire.zaiko %>
+        <div class="izawaspace">
+        <div class="izawamigispace"></div>
+        <div class="izawahinban">品番</div>
+        <div class="izawazaiko">在庫</div>
+        <div class="izawachumon">注文数</div>
+        <div class="izawahidarispace"></div>
         </div>
 
-    <% end %>
-  </div>
-<% end %>
+      <% @wires.each do |wire| %>
+        <div class="izawaspace">
+        <div class="izawamigispace"></div>
+        <div class="izawahinban"><%= link_to "#{wire.hinban}", edit_wire_path(wire.id), class: :wire_bt %></div>
+        <div class="izawazaiko">
+        <% if wire.zaiko.negative? %>
+          <div class=""><font color=red><%= wire.zaiko  %></font></div>
+        <% else %>
+           <div class=""><%= wire.zaiko %></div>
+         <% end %>
+          </div>
+        <div class="izawachumon"><%= link_to "#{wire.chumon}",izawachumon_wire_path(wire.id), class: :wire_bt %></div>
+        <div class="izawahidarispace"></div>
+        </div>
+      <% end %>
