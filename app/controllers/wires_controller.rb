@@ -1,9 +1,8 @@
 class WiresController < ApplicationController
-  
   def concept
     @wires = Wire.all.order(:hinban)
   end
-  
+
   def izawa
     @wires = Wire.all.order(:hinban)
   end
@@ -33,11 +32,11 @@ class WiresController < ApplicationController
 
   def update
     @wire = Wire.find(params[:id])
-     @wire.update(wire_params)
-      @wire.zaiko = @wire.zaiko - @wire.chumon
-      @wire.zaikolog = @wire.zaiko
-      @wire.save
-       redirect_to izawa_path    
+    @wire.update(wire_params)
+    @wire.zaiko = @wire.zaiko - @wire.chumon
+    @wire.zaikolog = @wire.zaiko
+    @wire.save
+    redirect_to izawa_path
   end
 
   def show
@@ -48,16 +47,14 @@ class WiresController < ApplicationController
     @wire = Wire.find(params[:id])
   end
 
-  def update2 
+  def update2
     @wire = Wire.find(params[:id])
     @wire.update(wire_params)
     @wire.zaiko = @wire.zaikolog + @wire.zaiko
     @wire.zaikolog = @wire.zaiko
     @wire.save
-      redirect_to root_path
-
-    end
-  
+    redirect_to root_path
+  end
 
   def reset
     Wire.update_all(chumon: 0)
@@ -67,6 +64,6 @@ class WiresController < ApplicationController
   private
 
   def wire_params
-    params.require(:wire).permit(:hinban, :kei_id ,:iro_id ,:nagasa, :tanka, :chumon, :chumonlog, :zaiko, :zaikolog)
+    params.require(:wire).permit(:hinban, :kei_id, :iro_id, :nagasa, :tanka, :chumon, :chumonlog, :zaiko, :zaikolog)
   end
 end

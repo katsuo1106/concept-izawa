@@ -1,5 +1,4 @@
 class Wire < ApplicationRecord
-  
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :kei
   belongs_to :iro
