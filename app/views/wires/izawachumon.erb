@@ -1,6 +1,50 @@
-<%= form_with model: @wire, local: true do |f| %>
-  <div class="wire-box">
-    <%= f.text_field :chumon, autofocus: true, class:"chumon", placeholder:"確定注文数" %>
-  <%= f.submit "確定" ,class:"btn" %>
-<% end %>
+      <header class="header">
+      <div class="concept-var">
+        <div class="concept-logo">
+              <%= link_to "井澤金属", izawa_path, class: :concept__btn %>
+              </div>
+              <div class="izawa-logo">
+              <%= link_to "CONCEPT→", root_path, class: :izawa__btn %>
+              </div>
+        </div>
+      </div>
+    </header>
+    <div class="izawatopspace">
+      <div class="shinkihin"><%= link_to '新規品作成',new_wire_path,class: :izawa__shinki %></div>
+      <div class="ichiran">注文書作成</div>
+      <div class="reset"><%= link_to '0リセット',reset_path,class: :izawa__riset ,method: :patch  %></div>
+    </div>
+        <div class="izawaspace">
+        <div class="izawamigispace"></div>
+        <div class="izawahinban"><div class ="izawawires">品番</div></div>
+        <div class="izawazaiko"><div class ="izawawires">在庫</div></div>
+        <div class="izawachumon"><div class ="izawawires">注文数</div></div>
+        <div class="izawahidarispace"></div>
+        </div>
+
+        <div class="izawaspace2">
+        <div class="izawamigispace"></div>
+        <div class="izawahinban2"><%= "#{@wire.hinban}"%></div>
+        <div class="izawazaiko2">
+        <% if @wire.zaiko.negative? %>
+          <div class="izawafontsize"><font color=red><%= @wire.zaiko  %></font></div>
+        <% else %>
+           <div class="izawafontsize"><%= @wire.zaiko %></div>
+         <% end %>
+          </div>
+        <div class="izawachumon3">
+            <%= form_with model: @wire, local: true do |f| %>
+            <%= f.text_field :chumon, autofocus: true, class:"izawachumonform3", placeholder:"確定注文数" %>
+            
+        </div>
+        <div class="izawahidarispace">
+          <%= f.submit "確定" ,class:"btn2" %>
+          <% end %>
+        </div>
+        </div>
+
+
+
+
+
  
