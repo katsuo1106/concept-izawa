@@ -10,23 +10,22 @@
       </div>
     </header>
         <div class="izawatopspace">
-      <div class="shinkihin"><%= link_to '新規品作成',new_wire_path,class: :izawa__shinki %></div>
+      <div class="shinkihin"><%= link_to '新規品追加',new_wire_path,class: :izawa__shinki %></div>
       <div class="ichiran">注文書作成</div>
       <div class="reset"><%= link_to '0リセット',reset_path,class: :izawa__riset ,method: :patch  %></div>
     </div>
-    <div class="newspace">
-    </div>
+    <div class="newspace"></div>
 
-  <div>
+    <div class="newspace2">新規品追加</div>
+
   <div class="newwire-box">
     <%= form_with model: @wire,  local: true do |f| %>
-    <%= f.text_field :hinban, class:"newform", placeholder:"品番名" %>
+    <%= f.text_field :hinban,autofocus: true,class:"newform", placeholder:"品番名" %>
     <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"newkei"}) %>
-    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"newiro"}) %>
+    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"newkei"}) %>
     <%= f.text_field :nagasa, class:"newformmini", placeholder:"L寸" %>
     <%= f.text_field :tanka, class:"newformmini", placeholder:"単価" %>
-
-    <%= f.submit "新規品を登録" ,class:"newshinkibtn" %>
+    <%= f.submit "登録" ,class:"newshinkibtn" %>
   </div>
-  </div>
+  
 <% end %>

@@ -1,12 +1,35 @@
-<h1>品番編集ページ</h1>
-<%= form_with model: @wire,  local: true do |f| %>
-  <div class="wire-b">
-    <%= f.text_field :hinban, class:"hinban", placeholder:"品番名" %>
-    <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"genre-select"}) %>
-    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"genre-select"}) %>
-    <%= f.text_field :nagasa, class:"nagasa", placeholder:"L寸" %>
-    <%= f.text_field :tanka, class:"tanka", placeholder:"単価" %>
-    <%= f.text_field :zaiko, class:"zaiko", placeholder:"在庫" %>
-    <%= f.submit "品番更新" ,class:"btn" %>
+      <header class="header">
+      <div class="concept-var">
+        <div class="concept-logo">
+              <%= link_to "井澤金属", izawa_path, class: :concept__btn %>
+              </div>
+              <div class="izawa-logo">
+              <%= link_to "CONCEPT→", root_path, class: :izawa__btn %>
+              </div>
+        </div>
+      </div>
+    </header>
+        <div class="izawatopspace">
+      <div class="shinkihin"><%= link_to '新規品追加',new_wire_path,class: :izawa__shinki %></div>
+      <div class="ichiran">注文書作成</div>
+      <div class="reset"><%= link_to '0リセット',reset_path,class: :izawa__riset ,method: :patch  %></div>
+    </div>
+    <div class="newspace"></div>
+
+    <div class="newspace2">品番編集</div>
+
+  <div class="newwire-box">
+    <%= form_with model: @wire,  local: true do |f| %>
+    <%= f.text_field :hinban, class:"newform", placeholder:"品番名" %>
+    <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"newkei"}) %>
+    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"newkei"}) %>
+    <%= f.text_field :nagasa, class:"newformmini", placeholder:"L寸" %>
+    <%= f.text_field :tanka, class:"newformmini", placeholder:"単価" %>
+    <%= f.text_field :chumon, class:"newform3", placeholder:"注文数" %>
+    <%= f.text_field :chumonlog, class:"newform3", placeholder:"注文log" %>
+    <%= f.text_field :zaiko, class:"newform3", placeholder:"在庫数" %>
+    <%= f.text_field :zaikolog, class:"newform3", placeholder:"在庫log" %>
+    <%= f.submit "変更" ,class:"newshinkibtn" %>
   </div>
+  
 <% end %>
