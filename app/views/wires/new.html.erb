@@ -1,15 +1,32 @@
-<h1>新規品登録ページ</h1>
-<%= form_with model: @wire,  local: true do |f| %>
-  <div class="wire-box">
-    <%= f.text_field :hinban, class:"hinban", placeholder:"品番名" %>
-    <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"genre-select"}) %>
-    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"genre-select"}) %>
-    <%= f.text_field :nagasa, class:"nagasa", placeholder:"L寸" %>
-    <%= f.text_field :tanka, class:"tanka", placeholder:"単価" %>
-    <%= f.text_field :chumon, class:"chumon", placeholder:"確定注文数" %>
-    <%= f.text_field :chumonlog, class:"chumon", placeholder:"確定注文数log" %>
-    <%= f.text_field :zaiko, class:"zaiko", placeholder:"生産数" %>
-    <%= f.text_field :zaikolog, class:"zaikolog", placeholder:"生産数log" %>
-    <%= f.submit "新規品を登録" ,class:"btn" %>
+      <header class="header">
+      <div class="concept-var">
+        <div class="concept-logo">
+              <%= link_to "井澤金属", izawa_path, class: :concept__btn %>
+              </div>
+              <div class="izawa-logo">
+              <%= link_to "CONCEPT→", root_path, class: :izawa__btn %>
+              </div>
+        </div>
+      </div>
+    </header>
+        <div class="izawatopspace">
+      <div class="shinkihin"><%= link_to '新規品作成',new_wire_path,class: :izawa__shinki %></div>
+      <div class="ichiran">注文書作成</div>
+      <div class="reset"><%= link_to '0リセット',reset_path,class: :izawa__riset ,method: :patch  %></div>
+    </div>
+    <div class="newspace">
+    </div>
+
+  <div>
+  <div class="newwire-box">
+    <%= form_with model: @wire,  local: true do |f| %>
+    <%= f.text_field :hinban, class:"newform", placeholder:"品番名" %>
+    <%= f.collection_select(:kei_id, Kei.all, :id, :name, {}, {class:"newkei"}) %>
+    <%= f.collection_select(:iro_id, Iro.all, :id, :name, {}, {class:"newiro"}) %>
+    <%= f.text_field :nagasa, class:"newformmini", placeholder:"L寸" %>
+    <%= f.text_field :tanka, class:"newformmini", placeholder:"単価" %>
+
+    <%= f.submit "新規品を登録" ,class:"newshinkibtn" %>
+  </div>
   </div>
 <% end %>
