@@ -38,14 +38,14 @@ concept(生産側)は当日の必要生産分が一目でわかる
 
 ## 開発環境
 - フロントエンド  
-　HTML,CSS,JavaScript  
+HTML,CSS,JavaScript  
 - バックエンド  
-　Ruby on Rails(Ruby)  
-- インフラ
-　Heroku  
+Ruby on Rails(Ruby)  
+- インフラ  
+Heroku  
 - OS  
-　Mac/Linux  
+Mac/Linux  
 - データベース  
-　MySQL/MariaDB  
+MySQL/MariaDB  
 - タスク管理  
-　Github  
+Github  
