@@ -7,7 +7,7 @@ concept(生産側)は当日の必要生産分が一目でわかる
 https://concept-izawa.herokuapp.com/
 
 ## Basic認証
-ID:admin
+ID:admin  
 pass:2222
 
 ## 利用方法
