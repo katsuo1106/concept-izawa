@@ -4,8 +4,11 @@ concept(生産側)は当日の必要生産分が一目でわかる
 井澤金属(発注側)は製品の在庫状況が一目でわかる,concept側への生産指示も入力するだけ
 
 ## URL
+https://concept-izawa.herokuapp.com/
 
 ## Basic認証
+ID:admin
+pass:2222
 
 ## 利用方法
 #### concept(生産側)
