@@ -26,7 +26,7 @@ pass:2222
 
 ## データベース設計
 
-https://gyazo.com/da1438a63daf4f65298b040b175d8bf8
+[![Image from Gyazo](https://i.gyazo.com/da1438a63daf4f65298b040b175d8bf8.png)](https://gyazo.com/da1438a63daf4f65298b040b175d8bf8)
 
 ### wiresテーブル
 | Column    | Type    | Options                             |
