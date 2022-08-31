@@ -43,7 +43,7 @@ pass:2222
 
 ## 画面遷移図
 
-https://gyazo.com/b55d2b75e9848431b87f174b11b6ec14
+[![Image from Gyazo](https://i.gyazo.com/b55d2b75e9848431b87f174b11b6ec14.png)](https://gyazo.com/b55d2b75e9848431b87f174b11b6ec14)
 
 ## 開発環境
 - フロントエンド  
