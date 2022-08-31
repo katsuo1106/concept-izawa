@@ -22,7 +22,9 @@ pass:2222
 毎朝、井澤金属さんと在庫の確認、生産の可否を電話でやりとりしていました。  
 データが記録に残らない電話での毎朝のやりとり時間を無くしたく作成しました。
 
-## 要件定義
+## 洗い出した要件
+
+[要件を定義したシート](https://docs.google.com/spreadsheets/d/1QytKhKtagR68b6FbSMhHxU4dZLu329OO9-Ny-sFkvkw/edit#gid=982722306)
 
 ## データベース設計
 
