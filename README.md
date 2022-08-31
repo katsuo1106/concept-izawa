@@ -41,6 +41,10 @@ https://gyazo.com/da1438a63daf4f65298b040b175d8bf8
 | nagasa    | integer | null: false, precision: 6, scale: 2 |
 | tanka     | float   | null: false, precision: 6, scale: 2 |
 
+## 画面遷移図
+
+https://gyazo.com/b55d2b75e9848431b87f174b11b6ec14
+
 ## 開発環境
 - フロントエンド  
 HTML,CSS,JavaScript  
